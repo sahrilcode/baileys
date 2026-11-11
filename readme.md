@@ -15,7 +15,7 @@
 </p>
 
 > [!NOTE]
-> `"@whiskeysockets/baileys": "github:zaienv/baileys"` is an unofficial WhatsApp Web API library. Not affiliated, not authorized, not maintained, not sponsored, and not endorsed by WhatsApp or Meta.
+> `"@whiskeysockets/baileys": "github:sahrilcode/baileys"` is an unofficial WhatsApp Web API library. Not affiliated, not authorized, not maintained, not sponsored, and not endorsed by WhatsApp or Meta.
 >
 > Use Baileys responsibly, and comply with the WhatsApp Terms of Service and applicable laws.
 
@@ -70,7 +70,7 @@ Add it to your `package.json`:
 ```json
 {
   "dependencies": {
-    "@whiskeysockets/baileys": "github:zaienv/baileys"
+    "@whiskeysockets/baileys": "github:sahrilcode/baileys"
   }
 }
 ```
@@ -137,14 +137,14 @@ console.log("Ur pairing code : " + code);
 // relayMessage — sends a raw message object
 (async () => {
 	await client.relayMessage(m.chat, {
-		conversation: 'zaienv'
+		conversation: 'sahril2nd'
 	});
 })();
 
 // sendMessage — the standard way to send a message
 (async () => {
 	await client.sendMessage(m.chat, {
-		text: 'zaienv'
+		text: 'sahril2nd'
 	});
 })();
 ```
@@ -220,7 +220,7 @@ console.log("Ur pairing code : " + code);
 ```javascript
 (async () => {
 	try {
-		const number = '6281234567890';
+		const number = '628xxx';
 		const result = await checkBan(number);
 
 		await client.sendMessage(m.chat, {
@@ -234,7 +234,7 @@ console.log("Ur pairing code : " + code);
 
 ### Usage
 
-- Replace `6281234567890` with the phone number you want to check.
+- Replace `628xxx` with the phone number you want to check.
 - `checkBan` must already be defined in your bot's environment.
 
 > [!NOTE]
@@ -248,7 +248,7 @@ console.log("Ur pairing code : " + code);
 (async () => {
 	await client.relayMessage(m.chat, {
 		extendedTextMessage: {
-			text: 'zaienv'
+			text: 'sahril2nd'
 		}
 	}, {
 		ptcp: true
@@ -261,7 +261,7 @@ console.log("Ur pairing code : " + code);
 ```javascript
 (async () => {
 	await client.sendMessage(m.chat, {
-		text: 'zaienv'
+		text: 'sahril2nd'
 	}, {
 		ptcp: true
 	});
@@ -276,16 +276,16 @@ console.log("Ur pairing code : " + code);
 await client.sendRich(m.chat, {
   header: {
     disclaimer: true,
-    disclaimerText: "t.me/zdven",
-    title: "zaienv"
+    disclaimerText: "t.me/sahril2nd",
+    title: "fuck n!gga"
   },
   body: {
     title: "Select Option",
     buttons: ["Menu 1", "Menu 2"]
   },
   footer: {
-    text: "Telegram Channel",
-    url: "https://t.me/zdxnv"
+    text: "Whatsapp Channel",
+    url: "https://whatsapp.com/channel/0029Vb9jLVwJUM2WHAO4Ak1q"
   }
 });
 ```
@@ -294,7 +294,7 @@ await client.sendRich(m.chat, {
 
 # Message Builder
 
-MessageBuilder v4.7 is included directly in `"github:zaienv/baileys"`.
+MessageBuilder v4.7 is included directly in `"github:sahrilcode/baileys"`.
 
 ## Import
 
@@ -322,17 +322,17 @@ const {
 const { MB } = require('@whiskeysockets/baileys')
 
 const rich = new MB.AIRich(sock)
-  .setTitle('zaienv')
+  .setTitle('sahril2nd')
   .setFooter('Dibuat dengan AIRich')
   .addText('Halo! Ini respons rich.')
-  .addCode('javascript', `console.log('Halo zai')`)
+  .addCode('javascript', `console.log('Halo sahril2nd')`)
   .addTable([
     ['Fitur', 'Status'],
     ['Button', 'Tersedia'],
     ['Carousel', 'Tersedia'],
     ['AIRich', 'Eksperimental']
   ])
-  .addSuggest(['List Menu', 'Help', 'About zai'])
+  .addSuggest(['List Menu', 'Help', 'About sahril2nd'])
 
 await rich.send(jid)
 ```
@@ -351,10 +351,10 @@ const { MB } = require('@whiskeysockets/baileys')
 const msg = new MB.Button(client)
   .setTitle('Select Menu')
   .setBody('Pilih salah satu di bawah.')
-  .setFooter('t.me/zdven')
+  .setFooter('t.me/sahril2nd')
   .addReply('Ping', 'ping')
   .addUrl('Buka Website', 'https://example.com')
-  .addCopy('Salin Kode', 'zaienv')
+  .addCopy('Salin Kode', 'sahril2nd')
 
 await msg.send(m.chat)
 ```
@@ -369,10 +369,10 @@ await msg.send(m.chat)
 const { MB } = require('@whiskeysockets/baileys')
 
 const message = new MB.ButtonV2(client)
-  .setTitle('zaienv')
+  .setTitle('sahril2nd')
   .setSubtitle('WhatsApp Bot')
   .setBody('Pilih satu tindakan.')
-  .setFooter('zaiBaileys')
+  .setFooter('sahril2nd')
   .setThumbnail('https://example.com/xxx.jpg')
   .addButton('Menu', 'menu')
   .addButton('Ping', 'ping')
@@ -403,7 +403,7 @@ const card2 = await new MB.Button(client)
 
 const carousel = new MB.Carousel(client)
   .setBody('Pilih salah satu kartu di bawah.')
-  .setFooter('zaiCarousel')
+  .setFooter('Carousel')
   .addCard([card1, card2])
 
 await carousel.send(jid)
@@ -425,9 +425,9 @@ Because this library offers high stability, full features, and an actively impro
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/zaienv">
-        <img src="https://cdn.takahasii.my.id/file/414f32e8-80ca-4711-beb7-4d1f68b0e5e3?mode=attachment&exp=0&sig=ae07c53dec74437ac82708f1b88245e1a38aa02891bc4abd5ce58217248b025e" width="80px;" style="border-radius:50%;" alt="Main contributor"/>
-        <br /><sub><b>Z A I D E V</b></sub>
+      <a href="https://github.com/sahrilcode">
+        <img src="https://img3.pixhost.to/images/7098/803501483_akoya-md.jpg" width="80px;" style="border-radius:50%;" alt="Main contributor"/>
+        <br /><sub><b>S A H R I L</b></sub>
       </a>
     </td>
   </tr>
@@ -440,17 +440,17 @@ Because this library offers high stability, full features, and an actively impro
 Have questions, suggestions, or need help with this project? Feel free to reach out through the channels below.
 
 <p align="center">
-  <a href="https://t.me/zdven">
+  <a href="https://t.me/sahril2nd">
     <img src="https://img.shields.io/badge/Telegram-Contact%20Developer-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"/>
   </a>
-  <a href="https://whatsapp.com/channel/0029VbDXMbwElagkugFqkU3U">
+  <a href="https://whatsapp.com/channel/0029Vb9jLVwJUM2WHAO4Ak1q">
     <img src="https://img.shields.io/badge/WhatsApp-Official%20Channel-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp Channel"/>
   </a>
-  <a href="https://t.me/zdxnv">
+  <a href="https://t.me/sahril2nd">
     <img src="https://img.shields.io/badge/Telegram-Updates-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram Channel"/>
   </a>
 </p>
 
 <p align="center">
-  <sub>Developed and maintained by <a href="https://github.com/zaienv">zai</a>.</sub>
+  <sub>Developed and maintained by <a href="https://github.com/sahrilcode">sahril2nd</a>.</sub>
 </p>
